@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+class Solution {
+    public boolean areAnagrams(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+
+        int[] bitmap1 = new int[26]; 
+
+        int[] bitmap2 = new int[26]; 
+        
+        for (int i = 0; i < s1.length(); i++) {
+            bitmap1[s1.charAt(i) - 'a']++;
+        }
+
+        for (int i = 0; i < s2.length(); i++) {
+            bitmap2[s2.charAt(i) - 'a']++;
+        }
+
+        return Arrays.equals(bitmap1, bitmap2);
+    }
+}
