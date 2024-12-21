@@ -1,0 +1,16 @@
+import java.util.*;
+public class Solution {
+    public static List< Integer > sortedArray(int []a, int []b) {
+     
+        HashSet<Integer> set = new HashSet<>();
+        for(int n:a){
+         set.add(n);
+        }
+        for(int m :b){
+            set.add(m);
+        }
+        List<Integer> result = new ArrayList<>(set);
+        Collections.sort(result);
+        return result;
+    }
+}
