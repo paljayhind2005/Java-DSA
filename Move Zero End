@@ -1,0 +1,15 @@
+
+public class Solution {
+        public static int[] moveZeros(int n, int []a) {
+        int index = 0;
+        for(int num:a){
+           if(num!=0){
+               a[index++] =num;
+           }
+        }
+        while(index<a.length){
+            a[index++] = 0;
+        }
+        return a;
+    }
+}
