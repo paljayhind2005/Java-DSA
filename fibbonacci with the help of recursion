@@ -1,0 +1,23 @@
+package Recursion;
+
+public class Fibonacci {
+    static int fib(int n) {
+        if (n == 0 || n == 1) { // Base Case
+            return n;
+        }
+        int prev = fib(n - 1); // Recursive Work
+        int prevprev = fib(n - 2);
+
+        // Self Work
+        return prev + prevprev;
+    }
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(fib(i)); // Call fib(i) for each index
+        }
+
+    }
+
+
+}
