@@ -1,0 +1,29 @@
+class Solution {
+    public int waysToSplitArray(int[] nums) {
+        int left = 0;
+        int sum = 0;
+        for(int num : nums){
+           sum = sum+ num;
+        }
+        int count = 0;
+        for(int i=0;i<nums.length-1;i++){
+            left = left+ nums[i];
+            sum-=nums[i];
+            if(left>=sum){
+                count++;
+            }
+        }
+        return count;
+        
+        
+    }
+}
+_______________________________________________________________________________
+
+                                 APPROCH
+_____________ __________________________________________
+sabse pahle total sum count karna hai
+and ak loop chalana pure array par length-1 tak
+then sum+=nums[i] || left-=nums[i] sum ko add karna hai or left ko ghatana hai usem ese
+usek checked kARNA hai
+agar sum bada or equla hai left ke to coutn ko badana hai or return kar dena hai
